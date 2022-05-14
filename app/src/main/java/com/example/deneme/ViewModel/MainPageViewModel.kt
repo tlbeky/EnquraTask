@@ -9,9 +9,7 @@ class MainPageViewModel :ViewModel(){
     var bankRepo = BanksDaoRepository()
     var listOfBanks = MutableLiveData<List<Banks>>()
 
-    //https://raw.githubusercontent.com/fatiha380/mockjson/main/bankdata
     init {
-        loadBank()
         listOfBanks = bankRepo.getBanks()
     }
 

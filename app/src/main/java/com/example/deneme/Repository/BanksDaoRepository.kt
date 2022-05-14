@@ -39,7 +39,6 @@ class BanksDaoRepository {
         })
     }
     fun searchBank(searchword:String){
-        getAllBank()
         val list = listOfBanks.value
         val blist = mutableListOf<Banks>()
 
@@ -50,6 +49,7 @@ class BanksDaoRepository {
             for (obj in list!!) {
                 if (obj.dcSEHIR.contains(searchword)) {
                     blist.add(obj)
+
                 }
             }
             listOfBanks.value = blist
